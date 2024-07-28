@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={PoppinsFont.className}>
-      <body>
+      <body className="px-2 md:px-10">
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>

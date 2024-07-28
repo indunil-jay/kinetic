@@ -61,9 +61,38 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply box-border border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Remove scrollbar */
+  .remove-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    border-radius: 0px;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+  }
+
+  .remove-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .custom-input {
+    @apply border-none focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+  }
+  .custom-input-icon {
+    @apply ml-2 h-[24px] w-[24px] text-muted-foreground !important;
   }
 }

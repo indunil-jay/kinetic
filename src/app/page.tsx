@@ -1,33 +1,17 @@
-import { HydrateClient } from "@/trpc/server";
-import { Logo } from "@/app/_components/logo";
 import Link from "next/link";
+import Image from "next/image";
+import { HydrateClient } from "@/trpc/server";
+
 import { Button } from "@/app/_components/ui/button";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import Image from "next/image";
 import { herobg1, herobg2 } from "@/constants";
+import { Navigation } from "@/app/_components/navigation";
 
 export default async function Home() {
   return (
     <HydrateClient>
-      <main className="grid min-h-[100dvh] grid-rows-[auto_1fr] flex-col px-2 md:px-10">
-        <nav className="flex h-[4.125rem] items-center justify-between border-b border-secondary">
-          <Logo />
-          <div className="flex h-full flex-col justify-center bg-black text-white sm:bg-transparent sm:text-primary">
-            <div className="flex gap-2 px-5 sm:px-0">
-              <Button asChild variant={"transparent"} className="uppercase">
-                <Link href="#"> Sign in</Link>
-              </Button>
-
-              <Button
-                asChild
-                className="upper 'case hidden font-normal sm:flex"
-              >
-                <Link href="#">Get Started</Link>
-              </Button>
-            </div>
-          </div>
-        </nav>
-
+      <main className="grid min-h-[100dvh] grid-rows-[auto_1fr] flex-col">
+        <Navigation />
         <section className="relative flex h-full flex-col items-center justify-center">
           <div className="absolute bottom-0 z-0 sm:left-0 sm:top-0">
             <div>
