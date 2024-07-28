@@ -34,7 +34,7 @@ export default async function Home() {
 
             <div className="mt-5">
               <Button asChild>
-                <Link href="#">
+                <Link href="/auth/sign-up">
                   <span className="flex items-center gap-2">
                     <span className="font-normal uppercase">Start Reading</span>
                     <span>

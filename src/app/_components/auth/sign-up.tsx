@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import SignUpForm from "@/components/forms/sign-up-form";
-import SocialLogin from "@/components/auth/social-login";
-import BackToHome from "@/components/back-home-button";
-import { signupBg } from "../../constants";
+import { BackToHome } from "@/app/_components/back-home-button";
+import { SocialLogin } from "@/app/_components/auth/social-login";
+import { Button } from "@/app/_components/ui/button";
+import { SignUpForm } from "@/app/_components/forms/sign-up-form";
+import { Separator } from "@/app/_components/ui/separator";
+import { signupbg } from "@/constants";
 
 const SignUp = () => {
   return (
@@ -23,7 +22,7 @@ const SignUp = () => {
               Don&apos;t have an account?
             </span>{" "}
             <Button asChild variant={"link"} className="text-sm text-primary">
-              <Link href="/auth/signin">Sign Up</Link>
+              <Link href="/auth/sign-in">Sign Up</Link>
             </Button>
           </p>
 
@@ -38,7 +37,7 @@ const SignUp = () => {
               <h2 className="text-[2rem] font-medium capitalize">
                 Scribio is Absolutely Free for Everyone
               </h2>
-              <h3 className="text-[1.3rem] font-medium capitalize">
+              <h3 className="text-[1.125rem] font-medium capitalize leading-tight text-primary/60">
                 Join the Ultimate Blogging Experience
               </h3>
             </div>
@@ -50,7 +49,7 @@ const SignUp = () => {
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <Image
-              src={signupBg}
+              src={signupbg}
               priority
               alt="signup-background-image"
               className="hidden object-cover opacity-50 md:block"

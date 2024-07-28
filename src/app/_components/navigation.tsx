@@ -13,7 +13,7 @@ export const Navigation = () => {
           </Button>
 
           <Button asChild className="upper 'case hidden font-normal sm:flex">
-            <Link href="#">Get Started</Link>
+            <Link href="/auth/sign-up">Get Started</Link>
           </Button>
         </div>
       </div>

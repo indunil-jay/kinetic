@@ -3,8 +3,8 @@ import Link from "next/link";
 import { SignInForm } from "@/app/_components/forms/sign-in-form";
 import { Button } from "@/app/_components/ui/button";
 import { Separator } from "@/app/_components/ui/separator";
-import SocialLogin from "./social-login";
-import { BackToHome } from "../back-home-button";
+import { SocialLogin } from "@/app/_components/auth/social-login";
+import { BackToHome } from "@/app/_components/back-home-button";
 import { signinbg } from "@/constants";
 
 export const SignIn = () => {
@@ -23,7 +23,7 @@ export const SignIn = () => {
                 Don&apos;t have an account?
               </span>{" "}
               <Button asChild variant={"link"} className="text-sm text-primary">
-                <Link href="/auth/signup">Sign Up</Link>
+                <Link href="/auth/sign-up">Sign Up</Link>
               </Button>
             </p>
           </div>

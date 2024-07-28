@@ -6,7 +6,7 @@ type SocialLoginProps = {
   withOr?: boolean;
 };
 
-const SocialLogin = ({ withOr = true }: SocialLoginProps) => {
+export const SocialLogin = ({ withOr = true }: SocialLoginProps) => {
   return (
     <div className="space-y-2">
       {withOr && (
@@ -30,5 +30,3 @@ const SocialLogin = ({ withOr = true }: SocialLoginProps) => {
     </div>
   );
 };
-
-export default SocialLogin;
